@@ -1,0 +1,84 @@
+.navigation {
+  .go-flex(space-evenly);
+  background-color: @nav-bg;
+  height: 6em;
+  width: 100%;
+  font-size: 1.8rem;
+  color: @nav-font;
+  position: fixed;
+  top: 0;
+
+  .nav-brand {
+    width: 30%;
+    .go-flex(space-between);
+    font-size: 3.2rem;
+    font-weight: bold;
+    padding: 0 .5em;
+  }
+
+  nav {
+    width: 70%;
+    .go-flex(space-between);
+    padding: 0 .5em;
+
+    .menu {
+      display: none;
+
+      .icon-bar {
+        color: @nav-font;
+        background-color: @nav-font;
+
+      }
+    }
+
+    .nav-items {
+      .go-flex(space-evenly);
+
+      li {
+        margin: 0 1em;
+
+        a {
+          text-decoration: none;
+          &:link, &:visited {
+            color: @nav-font;
+          }
+        }
+
+        &:hover {
+          border: 1px solid @nav-font;
+          border-radius: .5em;
+          padding: 1em;
+        }
+      }
+    }
+
+    .accounts {
+      .go-flex(space-evenly);
+
+      li {
+        margin: 0 1em;
+
+        a {
+          text-decoration: none;
+          &:link, &:visited {
+            color: @nav-font;
+          }
+        }
+
+        &:last-child {
+          outline: none;
+          border: 1px solid @nav-font;
+          border-radius: .5em;
+          padding: 1em;
+          background-color: darken(@nav-bg, 20%);
+        }
+
+        &:hover {
+          border: 1px solid @nav-font;
+          border-radius: .5em;
+          padding: 1em;
+        }
+      }
+    }
+  }
+}
